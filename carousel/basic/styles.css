@@ -46,6 +46,7 @@ body {
 .slide_list .box-5 {
   background-color: #bba1bf;
 }
+
 .btn_box button {
   position: absolute;
   width: 50px;
@@ -54,6 +55,12 @@ body {
   border: 1px solid #535151;
   color: #535151;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn_box button:hover {
+  color: white;
+  background-color: #535151;
 }
 .btn_box .prev_btn {
   top: 50%;
