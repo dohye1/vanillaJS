@@ -21,9 +21,9 @@ const handleClick = (selectedIndex) => {
 
 function init() {
   pageDots[curIndex].classList.add(DOT_ACTIVE);
-  for (let i = 0; i < pageDots.length; i++) {
-    pageDots[i].addEventListener('click', () => handleClick(i));
-  }
+  pageDots.forEach((dot, index) =>
+    dot.addEventListener('click', () => handleClick(index))
+  );
 }
 
 init();
