@@ -1,7 +1,7 @@
 # JS CLASS 30 - css 변수 사용하기
 
 <p align="center">
-  <img src="https://media.vlpt.us/images/dolarge/post/3c9f7720-b7c1-4c99-af95-5a70c87fdd9f/ezgif.com-gif-maker%20(16).gif" />
+  <img src="https://media.vlpt.us/images/dolarge/post/3c9f7720-b7c1-4c99-af95-5a70c87fdd9f/ezgif.com-gif-maker%20(16).gif" /> 
   </p>
 
 # 알아두기
