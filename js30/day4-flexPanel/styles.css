@@ -33,22 +33,25 @@ html {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-size: 100% 100%;
+  background-repeat: none;
+  overflow: hidden;
 }
 
 .panel1 {
-  background-image: url(https://source.unsplash.com/gYl-UtwNg_I/1500x1500);
+  background-image: url('./img/db1.png');
 }
 .panel2 {
-  background-image: url(https://source.unsplash.com/rFKUFzjPYiQ/1500x1500);
+  background-image: url('./img/db2.JPG');
 }
 .panel3 {
-  background-image: url(https://images.unsplash.com/photo-1465188162913-8fb5709d6d57?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&w=1500&h=1500&fit=crop&s=967e8a713a4e395260793fc8c802901d);
+  background-image: url('./img/db3.JPG');
 }
 .panel4 {
-  background-image: url(https://source.unsplash.com/ITjiVXcwVng/1500x1500);
+  background-image: url('./img/db4.jpg');
 }
 .panel5 {
-  background-image: url(https://source.unsplash.com/3MNzGlQM7qs/1500x1500);
+  background-image: url('./img/db5.jpg');
 }
 
 .panel > * {
@@ -72,6 +75,7 @@ html {
 .panel > *:last-child {
   transform: translateY(100%);
 }
+
 .panel.open-active > *:last-child {
   transform: translateY(0);
 }
@@ -88,5 +92,5 @@ html {
 
 .panel-open {
   font-size: 40px;
-  flex: 5;
+  flex: 3;
 }

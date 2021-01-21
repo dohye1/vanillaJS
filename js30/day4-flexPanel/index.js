@@ -3,8 +3,12 @@ const panels = document.querySelectorAll('.panel');
 const PANEL_OPEN = 'panel-open';
 const OPEN_ACTIVE = 'open-active';
 
+let prevNode;
+
 function toggleOpen() {
+  if (prevNode) prevNode.classList.toggle(PANEL_OPEN);
   this.classList.toggle(PANEL_OPEN);
+  prevNode = this;
 }
 
 function toggleActive(e) {
