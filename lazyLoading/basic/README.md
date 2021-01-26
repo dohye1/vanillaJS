@@ -1,6 +1,6 @@
 # Lazy Loading
 
-<p align="center"><img src="https://media.vlpt.us/images/dolarge/post/59178f09-390f-47e8-9c47-3d706bc1f000/ezgif.com-gif-maker%20(23).gif" /></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/64346737/105805950-606ff980-5fe6-11eb-96f0-2611847925aa.gif" /></p>
 
 - 초기 렌더링 시 상단의 3개의 img만 src값이 주어진다. 그래서 네트워크탭에서 브라우저가 받아온 파일을 보면 이미지가 3개있다.
 
