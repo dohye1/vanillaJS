@@ -1,32 +1,28 @@
-function handleLoad() {
-  const lazyloadImage = document.querySelectorAll('img.lazy');
-
-  function lazyload() {
-    // 현재 스크롤이 위치한 y좌표
-    const scrollTop = window.pageYOffset;
-
-    lazyloadImage.forEach(function (img) {
-      if (img.offsetTop < scrollTop + window.innerHeight) {
-        img.src = img.dataset.src;
-        img.classList.remove('lazy');
-      }
-    });
-
-    // 모든 이미지가 로드된 상태
-    if (!lazyloadImage.length) {
-      document.removeEventListener('scroll', lazyload);
-      window.removeEventListener('resize', lazyload);
-      window.removeEventListener('orientationChange', lazyload);
-    }
+function lazyLoad() {
+  const lazyImgArr = document.querySelectorAll('.lazy');
+  if (lazyImgArr.length === 0) {
+    document.removeEventListener('scroll', lazyLoad);
+    window.removeEventListener('resize', lazyLoad);
+    window.removeEventListener('orientationchange', lazyLoad);
+    return;
   }
 
-  document.addEventListener('scroll', lazyload);
-  window.addEventListener('resize', lazyload);
-  window.addEventListener('orientationChange', lazyload);
+  lazyImgArr.forEach((img) => {
+    if (img.offsetTop < window.innerHeight + window.scrollY) {
+      img.src = img.dataset.src;
+      img.classList.remove('lazy');
+    }
+  });
+}
+
+function handleUpload() {
+  document.addEventListener('scroll', lazyLoad);
+  window.addEventListener('resize', lazyLoad);
+  window.addEventListener('orientationchange', lazyLoad);
 }
 
 function init() {
-  document.addEventListener('DOMContentLoaded', handleLoad);
+  document.addEventListener('DOMContentLoaded', handleUpload);
 }
 
 init();
