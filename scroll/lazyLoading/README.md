@@ -12,7 +12,7 @@
 
 - 이 기법은 초기 렌더링 시 브라우저가 모든 데이터를 받아오지 않고 상단의 데이터만 받아와서 화면에 반영하면 되기때문에 초기 렌더링 속도를 개선할 수 있고, 메모리의 부담을 줄일 수 있다.
 
-# 메인 아이디어
+# 구현방법
 
 <p align="center"><img width="400px" src="https://media.vlpt.us/images/dolarge/post/c4bb1e75-f402-49ab-ad79-fa698a1e3f7b/Notes_210126_143416.jpg" /></p>
 

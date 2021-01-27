@@ -1,30 +1,23 @@
 function handleLoad() {
   const lazyloadImage = document.querySelectorAll('img.lazy');
-  let lazyloadThrottleTimeout;
 
   function lazyload() {
-    if (lazyloadThrottleTimeout) {
-      clearTimeout(lazyloadThrottleTimeout);
-    }
+    // 현재 스크롤이 위치한 y좌표
+    const scrollTop = window.pageYOffset;
 
-    lazyloadThrottleTimeout = setTimeout(function () {
-      // 현재 스크롤이 위치한 y좌표
-      const scrollTop = window.pageYOffset;
-
-      lazyloadImage.forEach(function (img) {
-        if (img.offsetTop < scrollTop + window.innerHeight) {
-          img.src = img.dataset.src;
-          img.classList.remove('lazy');
-        }
-      });
-
-      // 모든 이미지가 로드된 상태
-      if (!lazyloadImage.length) {
-        document.removeEventListener('scroll', lazyload);
-        window.removeEventListener('resize', lazyload);
-        window.removeEventListener('orientationChange', lazyload);
+    lazyloadImage.forEach(function (img) {
+      if (img.offsetTop < scrollTop + window.innerHeight) {
+        img.src = img.dataset.src;
+        img.classList.remove('lazy');
       }
-    }, 20);
+    });
+
+    // 모든 이미지가 로드된 상태
+    if (!lazyloadImage.length) {
+      document.removeEventListener('scroll', lazyload);
+      window.removeEventListener('resize', lazyload);
+      window.removeEventListener('orientationChange', lazyload);
+    }
   }
 
   document.addEventListener('scroll', lazyload);
