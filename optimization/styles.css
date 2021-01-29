@@ -1,0 +1,27 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+div {
+  width: 200px;
+  height: 100px;
+  margin: 200px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+input {
+  width: 200px;
+  height: 60px;
+  padding: 15px 5px;
+  background-color: rgb(232, 236, 240);
+}
+
+p {
+  width: 100%;
+  margin-top: 30px;
+  font-size: 20px;
+}
